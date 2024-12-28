@@ -76,6 +76,9 @@ export default function ProductDetails({
                         </span>{" "}
                       </p>
                     </div>
+                    <Button type="button">
+                        Add to Cart
+                    </Button>
                   </div>
                 </CardFooter>
               </div>

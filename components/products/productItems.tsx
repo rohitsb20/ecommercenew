@@ -37,6 +37,7 @@ export default function ProductItems({ product }: { product: Product }) {
         <CardFooter className="flex flex-col">
           <p className="text-primary">Brand: {product.brand}</p>
           <p>Price: {product.price}$</p>
+          <p>status : {product.countInStock > 0 ? "Instock" : "unavailable"}</p>
         </CardFooter>
       </Card>
     </div>
