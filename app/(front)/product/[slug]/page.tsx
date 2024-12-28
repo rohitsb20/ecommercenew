@@ -12,6 +12,8 @@ import {
   CardDescription
 } from "@/components/ui/card";
 
+import AddToCart from "@/components/AddToCart";
+
 export default function ProductDetails({
   params,
 }: {
@@ -76,9 +78,22 @@ export default function ProductDetails({
                         </span>{" "}
                       </p>
                     </div>
-                    <Button type="button">
+                    {/* <Button type="button">
                         Add to Cart
-                    </Button>
+                    </Button> */}
+
+                    {product.countInStock !== 0 && (
+                      <div >
+                        <AddToCart
+                          item={{
+                            ...product,
+                            qty: 0,
+                            color: "",
+                            size: "",
+                          }}
+                        />
+                      </div>
+                    )}
                   </div>
                 </CardFooter>
               </div>
