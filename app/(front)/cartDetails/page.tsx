@@ -109,7 +109,7 @@ export default function CardDetails() {
 
             <div className="flex justify-center mt-4">
               <Button>
-                <Link href="/checkout"> Proceed to Checkout</Link>
+                <Link href="/shipping"> Proceed to Checkout</Link>
               </Button>
             </div>
           </div>
