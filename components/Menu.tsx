@@ -15,9 +15,12 @@ export default function Menu() {
   return (
     <div className="flex gap-x-3">
       <Button variant="default">
-        <Link href="/cart" className="p-2 text-lg tracking-wide font-semibold">
-          Cart
-          <div className="bg-red-400">
+        <Link
+          href="/cart"
+          className="flex gap-x-1 text-lg tracking-wide font-semibold"
+        >
+          <span> Cart</span>
+          <div className=" text-black px-2 rounded-xl">
             {mount && items.length != 0 && (
               <div>{items.reduce((a, c) => a + c.qty, 0)} </div>
             )}
