@@ -16,7 +16,7 @@ export default function Menu() {
     <div className="flex gap-x-3">
       <Button variant="default">
         <Link
-          href="/cart"
+          href="/cartDetails"
           className="flex gap-x-1 text-lg tracking-wide font-semibold"
         >
           <span> Cart</span>

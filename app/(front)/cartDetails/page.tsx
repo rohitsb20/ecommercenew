@@ -48,7 +48,8 @@ export default function CardDetails() {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-[100px]">Item</TableHead>
-                  <TableHead>Quantity</TableHead>
+                  <TableHead>Name</TableHead>
+                  <TableHead className="w-[200px]">Quantity</TableHead>
                   <TableHead>Price</TableHead>
                   <TableHead className="text-right">Amount</TableHead>
                 </TableRow>
@@ -66,8 +67,29 @@ export default function CardDetails() {
                         ></Image>
                       </Link>
                     </TableCell>
-                    <TableCell>Paid</TableCell>
-                    <TableCell>Credit Card</TableCell>
+                    <TableCell>
+                      <span className="text-base">{item.name}</span>
+                    </TableCell>
+                    <TableCell className="w-[200px]">
+                      <Button
+                        className="text-lg"
+                        type="button"
+                        onClick={() => decrease(item)}
+                      >
+                        -
+                      </Button>
+                      <span className="px-2 text-black font-bold">
+                        {item.qty}
+                      </span>
+                      <Button
+                        className="text-lg"
+                        type="button"
+                        onClick={() => increase(item)}
+                      >
+                        +
+                      </Button>
+                    </TableCell>
+                    <TableCell>price</TableCell>
                     <TableCell className="text-right">$250.00</TableCell>
                   </TableRow>
                 ))}
