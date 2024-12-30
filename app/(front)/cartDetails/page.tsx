@@ -98,7 +98,7 @@ export default function CardDetails() {
                       {item.price}$
                     </TableCell>
                     <TableCell className="text-right text-xl font-bold">
-                      {(item.qty * item.price).toFixed(2)}$
+                      {(item.qty * itemsPrice).toFixed(2)}$
                     </TableCell>
                   </TableRow>
                 ))}
@@ -108,8 +108,8 @@ export default function CardDetails() {
             {/* table ends */}
 
             <div className="flex justify-center mt-4">
-              <Button>
-                <Link href="/shipping"> Proceed to Checkout</Link>
+              <Button onClick={()=> router.push('/shipping')}>
+                 Proceed to Checkout
               </Button>
             </div>
           </div>
