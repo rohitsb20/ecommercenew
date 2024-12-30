@@ -98,7 +98,7 @@ export default function CardDetails() {
                       {item.price}$
                     </TableCell>
                     <TableCell className="text-right text-xl font-bold">
-                      {itemsPrice}$
+                      {(item.qty * item.price).toFixed(2)}$
                     </TableCell>
                   </TableRow>
                 ))}
