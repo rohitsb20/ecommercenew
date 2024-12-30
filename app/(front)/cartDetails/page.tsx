@@ -33,10 +33,13 @@ export default function CardDetails() {
       </h1>
 
       {items.length === 0 ? (
-        <div className="text-xl text-red-500 font-medium">
+        <div className="text-xl text-red-500 font-medium text-center flex flex-col items-center gap-y-2">
           Cart is Empty
-          <Button variant="outline">
-            <Link href="/">Go to Shopping</Link>
+          <Button
+            className="text-xl text-black font-medium w-fit"
+            variant="outline"
+          >
+            <Link href="/" >Go to Shopping</Link>
           </Button>
         </div>
       ) : (
