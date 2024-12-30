@@ -17,6 +17,11 @@ export default function Menu() {
       <Button variant="default">
         <Link href="/cart" className="p-2 text-lg tracking-wide font-semibold">
           Cart
+          <div className="bg-red-400">
+            {mount && items.length != 0 && (
+              <div>{items.reduce((a, c) => a + c.qty, 0)} </div>
+            )}
+          </div>
         </Link>
       </Button>
       <Button variant="default">
