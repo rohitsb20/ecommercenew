@@ -83,7 +83,7 @@ export default function ProductDetails({
                     </Button> */}
 
                     {product.countInStock !== 0 && (
-                      <div >
+                      <div>
                         <AddToCart
                           item={{
                             ...product,
@@ -94,6 +94,9 @@ export default function ProductDetails({
                         />
                       </div>
                     )}
+                    <Button variant="outline">
+                      <Link href='/cartDetails'>Go to CartPage</Link>
+                    </Button>
                   </div>
                 </CardFooter>
               </div>

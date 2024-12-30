@@ -17,7 +17,7 @@ import Image from "next/image";
 
 export default function CardDetails() {
   const router = useRouter();
-  const { items, itemPrice, decrease, increase } = useCartService();
+  const { items, itemsPrice, decrease, increase } = useCartService();
   const [mount, setMount] = useState(false);
   useEffect(() => {
     setMount(true);
@@ -28,7 +28,7 @@ export default function CardDetails() {
   }
   return (
     <>
-      <h1 className="text-2xl font-semibold text-secondary-foreground">
+      <h1 className=" pb-5 text-2xl font-semibold text-secondary-foreground">
         Shipping Cart
       </h1>
 
@@ -39,7 +39,7 @@ export default function CardDetails() {
             className="text-xl text-black font-medium w-fit"
             variant="outline"
           >
-            <Link href="/" >Go to Shopping</Link>
+            <Link href="/">Go to Shopping</Link>
           </Button>
         </div>
       ) : (
@@ -75,6 +75,7 @@ export default function CardDetails() {
                     </TableCell>
                     <TableCell className="w-[200px]">
                       <Button
+                        variant="outline"
                         className="text-lg"
                         type="button"
                         onClick={() => decrease(item)}
@@ -85,6 +86,7 @@ export default function CardDetails() {
                         {item.qty}
                       </span>
                       <Button
+                        variant="outline"
                         className="text-lg"
                         type="button"
                         onClick={() => increase(item)}
@@ -92,14 +94,24 @@ export default function CardDetails() {
                         +
                       </Button>
                     </TableCell>
-                    <TableCell>price</TableCell>
-                    <TableCell className="text-right">$250.00</TableCell>
+                    <TableCell className="text-lg font-semibold">
+                      {item.price}$
+                    </TableCell>
+                    <TableCell className="text-right text-xl font-bold">
+                      {itemsPrice}$
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
             </Table>
 
             {/* table ends */}
+
+            <div className="flex justify-center mt-4">
+              <Button>
+                <Link href="/checkout"> Proceed to Checkout</Link>
+              </Button>
+            </div>
           </div>
         </div>
       )}
